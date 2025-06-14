@@ -1,0 +1,18 @@
+Allure Commandline tool
+https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/
+Allure documentation
+https://allurereport.org/docs/testng/
+
+// generating Allure report
+allure generate ./allure-results --clean
+// display Allure report using local server
+allure open ./allure-report/
+
+Run project In CLI Mode
+mvn test
+
+Run project In CLI Mode with specific browser
+mv test -Dbrowser="firefox"
+
+Run project In CLI Mode with specific browser and suite file
+mv test -Dbrowser="chrome" -Dsuitefile="testng.xml"

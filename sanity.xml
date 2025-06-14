@@ -10,12 +10,12 @@
                     <exclude name="TestUserShouldNotBeAbleToLoginWithInvalidPassword"/>
                     <exclude name="TestUserShouldNotBeAbleToLoginWithInvalidUsername"/>
                     <exclude name="TestUserShouldNotBeAbleToLoginWithInvalidUsernamePassword"/>
-                    <include name="TestUserShouldNotBeAbleToLoginWithInvalidCredentials"/>
+                    <exclude name="TestUserShouldNotBeAbleToLoginWithInvalidCredentials"/>
                 </methods>
             </class>
             <class name="testcases.TestMainPage">
                 <methods>
-                    <include name="TestMainPageTitle"/>
+                    <exclude name="TestMainPageTitle"/>
                     <include name="TestLoginButton"/>
                 </methods>
             </class>

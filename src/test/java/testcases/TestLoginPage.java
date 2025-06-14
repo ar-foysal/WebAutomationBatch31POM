@@ -14,12 +14,17 @@ public class TestLoginPage extends DriverSetup {
     @Test
     public void TestUserCanLoginWithValidCredentials(){
         mainPage.loadAPage(mainPage.url);
+        mainPage.addScreenShot("Main Page");
         mainPage.clickOnElement(mainPage.login_btn);
+
         loginPage.writeOneElement(loginPage.username_input, loginPage.username);
         loginPage.writeOneElement(loginPage.password_input, loginPage.password);
+        loginPage.addScreenShot("Login Page After adding username and password");
         loginPage.clickOnElement(loginPage.login_btn);
         Assert.assertEquals(mainPage.getElementText(mainPage.username), loginPage.username);
         Assert.assertTrue(mainPage.waitForElementVisible(mainPage.user_icon).isDisplayed());
+        mainPage.addScreenShot("Log in Success");
+
 //        Assert.assertFalse(mainPage.visibleState(mainPage.login_btn));
     }
 
@@ -63,9 +68,11 @@ public class TestLoginPage extends DriverSetup {
         mainPage.clickOnElement(mainPage.login_btn);
         loginPage.writeOneElement(loginPage.username_input, username);
         loginPage.writeOneElement(loginPage.password_input, password);
+        loginPage.addScreenShot("Login Page After adding username and password");
         loginPage.clickOnElement(loginPage.login_btn);
         Assert.assertEquals(loginPage.getElementText(loginPage.error_message), error_message);
         Assert.assertTrue(loginPage.visibleState(loginPage.login_btn));
+        loginPage.addScreenShot("Login Page with Error msg");
     }
 
 
